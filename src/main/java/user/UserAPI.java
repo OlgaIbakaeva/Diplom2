@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
 public class UserAPI {
-    // создание пользователя
+
     public Response createUser(UserData userData) {
 
         return given()

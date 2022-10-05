@@ -1,4 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestsUserCreating
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.16 s - in TestsUserCreating
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.468 s <<< FAILURE! - in TestsUserCreating
+createdUserWithoutPasswordIsNotRegistered(TestsUserCreating)  Time elapsed: 0.621 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+XML path message doesn't match.
+Expected: Email, password and name are required fields
+  Actual: <429 Too Many Requests429 Too Many Requestsnullnginx/1.18.0 (Ubuntu)>
+
+	at TestsUserCreating.createdUserWithoutPasswordIsNotRegistered(TestsUserCreating.java:61)
+

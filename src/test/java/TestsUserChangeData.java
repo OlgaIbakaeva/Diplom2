@@ -14,7 +14,6 @@ public class TestsUserChangeData {
     private final UserAPI userAPI = new UserAPI();
     private Response response;
     private String token;
-    private String tokenSetUp;
     private String str;
 
     @Before
@@ -23,7 +22,6 @@ public class TestsUserChangeData {
         userData = UserData.getUserCorrect();
         response = userAPI.createUser(userData);
         token = response.then().extract().body().path("accessToken");
-        tokenSetUp = token;
     }
 
     @Test
@@ -113,7 +111,6 @@ public class TestsUserChangeData {
     @After
     public void setDown(){
         // удаляем тестового пользователя
-        token = tokenSetUp;
         userAPI.deleteUser(token);
     }
 }

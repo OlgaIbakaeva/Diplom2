@@ -1,4 +1,3 @@
-import org.junit.After;
 import user.UserData;
 import user.UserAPI;
 import io.restassured.response.Response;
