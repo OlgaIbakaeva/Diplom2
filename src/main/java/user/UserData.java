@@ -14,15 +14,6 @@ public class UserData {
         this.name = name;
     }
 
-    public UserData(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
-
-    // пустой конструктор для gson
-    public UserData() {
-    }
-
     public static UserData getUserCorrect() {
         return new UserData(
                 RandomStringUtils.randomAlphanumeric(10)+"@mail.ru",
@@ -38,6 +29,7 @@ public class UserData {
                 RandomStringUtils.randomAlphabetic(10)
         );
     }
+
     public static UserData getUserWithoutPassword() {
         return new UserData(
                 RandomStringUtils.randomAlphanumeric(10)+"@mail.ru",
